@@ -13599,9 +13599,9 @@ OK
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>回答：</strong> （1. 任务4中，env_data就是在项目刚开始从helper.py取回的MAZE，在整个文件中有效; 任务5中，env_data是函数的输入变量，值可能不是helper.py中的MAZE,作用范围仅局限于is_move_valid函数内.</p>
+<p><strong>回答：</strong> （1. 任务4中，env_data就是在项目刚开始从helper.py取回的MAZE，是全局变量; 任务5中，env_data是函数的输入变量，是局部变量，作用范围仅局限于is_move_valid函数内.</p>
 <ol>
-<li>不会，因为调用时只是把env<em>data</em> 赋予 env_data,env_data的改动只在函数内有效，并不影响函数外的env<em>data</em>;且env_data_作为输入参数，数据类型不可变，但env_data的类型确实可变）</li>
+<li>会. 函数的输入参数env_data_是可变变量，包括类型和值。因此，函数内对env_data的改变也会改变env<em>data</em>）。</li>
 </ol>
 
 </div>
